@@ -42,7 +42,7 @@ SSL verification toggle:
 
 #### Dependencies:
 
-`kscli` depends on [webtorrent](https://github.com/feross/webtorrent.git) for downlaoding the torrents. you can install [webtorrent](https://github.com/feross/webtorrent.git) using `npm` i.e.
+`kscli` depends on [webtorrent](https://github.com/feross/webtorrent.git) for downloading the torrents. you can install [webtorrent](https://github.com/feross/webtorrent.git) using `npm` i.e.
 
 ```
 npm install webtorrent
@@ -69,3 +69,7 @@ npm install webtorrent
 
  #### Credits
  * [Satyajit Roy](kodelint@gmail.com)
+
+ #### Thanks
+
+ Special **Thanks** to [Aly Akhtar](https://github.com/alyakhtar) for authoring [Katastrophe](https://github.com/alyakhtar/Katastrophe.git), which was the real inspiration behind [kscli](https://github.com/kodelint/kscli.git) 
