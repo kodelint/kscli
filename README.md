@@ -1,7 +1,7 @@
 # kscli
 <p align="left">
     <a href="https://github.com/kodelint/kscli/blob/master/LICENSE">
-        <img src="screenshots/kscli.svg">
+        <img src="https://img.shields.io/github/license/mashape/apistatus.svg">
     </a>
     <a href="https://github.com/kodelint/kscli/blob/master/CONTRIBUTING.md">
         <img src="https://img.shields.io/badge/contribute-1-green.svg">
