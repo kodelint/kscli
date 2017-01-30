@@ -1,6 +1,14 @@
-### kscli
+# kscli
+<p align="left">
+    <a href="https://github.com/kodelint/kscli/blob/master/LICENSE">
+        <img src="screenshots/kscli.svg">
+    </a>
+    <a href="https://github.com/kodelint/kscli/blob/master/CONTRIBUTING.md">
+        <img src="https://img.shields.io/badge/contribute-1-green.svg">
+    </a>
+</p>
 
-Commandline utility for [KickAss Torrents](http://kickasstorrents.to)
+Command line utility for [KickAss Torrents](http://kickasstorrents.to)
 
 `kscli` is a command line utility for [kickasstorrents](http://kickasstorrents.to).
 
@@ -72,4 +80,4 @@ npm install webtorrent
 
  #### Thanks
 
- Special **Thanks** to [Aly Akhtar](https://github.com/alyakhtar) for authoring [Katastrophe](https://github.com/alyakhtar/Katastrophe.git), which was the real inspiration behind [kscli](https://github.com/kodelint/kscli.git) 
+ Special **Thanks** to [Aly Akhtar](https://github.com/alyakhtar) for authoring [Katastrophe](https://github.com/alyakhtar/Katastrophe.git), which was the real inspiration behind [kscli](https://github.com/kodelint/kscli.git)
