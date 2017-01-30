@@ -1,0 +1,10 @@
+pip==9.0.1
+bumpversion==0.5.3
+fabric==1.13.1
+tabulate==0.7.7
+argparse==1.4.0
+requests==2.13.0
+bs4==0.0.1
+beautifulsoup4==4.5.3
+ConfigParser==3.5.0
+lxml==3.7.2
