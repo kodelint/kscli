@@ -1,15 +1,8 @@
 # kscli
-<p align="left">
-    <a href="https://github.com/kodelint/kscli/blob/master/LICENSE">
-        <img src="https://img.shields.io/github/license/mashape/apistatus.svg">
-    </a>
-    <a href="https://github.com/kodelint/kscli/blob/master/CONTRIBUTING.md">
-        <img src="https://img.shields.io/badge/contribute-1-green.svg">
-    </a>
-    <a href="https://travis-ci.org/kodelint/kscli.svg?branch=master">
-        <img src="https://travis-ci.org/kodelint/kscli.svg?branch=master">
-    </a>
-</p>
+---
+[![license: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/kodelint/kscli/blob/master/LICENSE.md)
+[![Build Status](https://travis-ci.org/kodelint/kscli.png?branch=master)](https://travis-ci.org/kodelint/kscli.svg?branch=master)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](hhttps://github.com/kodelint/kscli/blob/master/CONTRIBUTING.md)
 
 Command line utility for [KickAss Torrents](http://kickasstorrents.to)
 
