@@ -20,7 +20,11 @@ Command line utility for [KickAss Torrents](http://kickasstorrents.to)
 ```
 pip install -r requirements.txt
 ```
-_**Note: I do have the `setup.py` but the functionality is not been implemented yet.**_
+**OR**
+
+```
+python setup.py install
+```
 
 ```
 $ python kscli/kscli.py --help
