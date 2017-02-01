@@ -6,6 +6,9 @@
     <a href="https://github.com/kodelint/kscli/blob/master/CONTRIBUTING.md">
         <img src="https://img.shields.io/badge/contribute-1-green.svg">
     </a>
+    <a href="https://travis-ci.org/kodelint/kscli.svg?branch=master">
+        <img src="https://travis-ci.org/kodelint/kscli.svg?branch=master">
+    </a>
 </p>
 
 Command line utility for [KickAss Torrents](http://kickasstorrents.to)
