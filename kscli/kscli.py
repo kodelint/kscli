@@ -35,7 +35,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 def main():
     os.environ['COLUMNS'] = '120'
     parser = argparse.ArgumentParser(description='kscli (KickAss Cli utility)', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    kickass = parser.add_mutually_exclusive_group(required=False)
+    kickass = parser.add_argument_group()
     kickass.add_argument('-n', '--new', action='store_true', help='Gets the latest torrents from kickasstorrents.to, sorted by seeders')
     kickass.add_argument('-m', '--movies', action='store_true', help='Gets the latest movie from kickasstorrents.to, sorted by seeders')
     kickass.add_argument('-t', '--tv', action='store_true', help='Gets the latest tv show from kickasstorrents.to, sorted by seeders')
@@ -44,32 +44,38 @@ def main():
     kickass.add_argument('-x', '--naughty', action='store_true', help='Gets the latest naughty stuff from kickasstorrents.to, sorted by seeders')
     kickass.add_argument('-s', '--music', action='store_true', help='Gets the latest music from kickasstorrents.to, sorted by seeders')
     kickass.add_argument('-S', '--search', action='store', help='Search results from kickasstorrents.to, sorted by seeders')
+    kickass.add_argument('-p', '--page', action='store', help='Navigate page by page')
     kickass.add_argument('-v', '--version', action='store_true', help='Kickass Version')
     sslopts = parser.add_argument_group('SSL verification toggle')
     sslopts.add_argument('--no_verifyssl', action='store_true', default=True, required=False, help='Toggle for SSL verification')
     kickassargs = parser.parse_args()
     ssl = True
 
+    if kickassargs.page:
+        page = kickassargs.page
+    else:
+        page = None
     if kickassargs.no_verifyssl:
         ssl = False
     if kickassargs.movies:
-        get_movies(ssl)
+        get_movies(ssl, page)
     elif kickassargs.tv:
-        get_tv(ssl)
+        get_tv(ssl, page)
     elif kickassargs.new:
-        get_new(ssl)
+        get_new(ssl, page)
     elif kickassargs.apps:
-        get_apps(ssl)
+        get_apps(ssl, page)
     elif kickassargs.books:
-        get_books(ssl)
+        get_books(ssl, page)
     elif kickassargs.naughty:
-        get_naughty(ssl)
+        get_naughty(ssl, page)
     elif kickassargs.music:
         get_music(ssl)
     elif kickassargs.search:
-        lets_search(kickassargs.search, ssl)
+        lets_search(kickassargs.search, ssl, page)
     elif kickassargs.version:
         print_version()
+        # read_conf()
         pass
     else:
         print(red("You got the wrong option bro..."))
