@@ -39,7 +39,7 @@ def pptable(resultset):
         exit()
     else:
         headers = [green('INDEX'), green('NAME'), green('SIZE'), green('SEEDS'), green('LEECHERS'), green('MEGNET')]
-        print(tabulate(dump, headers, tablefmt='psql', numalign="center"))
+        print(tabulate(resultset, headers, tablefmt='psql', numalign="center"))
 
 
 def which(program):
