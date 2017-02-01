@@ -13,11 +13,12 @@ except NameError:
     xrange_ = range
 
 
-def fetch(category, ssl, search):
+def fetch(category, ssl, page, search):
     if search == True:
-        url = generate_url(category, flag=True)
+        url = generate_url(category, page, flag=True)
     else:
-        url = generate_url(category, flag=False)
+        url = generate_url(category, page, flag=False)
+
     source_code = requests.get(url, verify=ssl)
     plain_text = source_code.text.encode('utf-8')
     soup = BeautifulSoup(plain_text, "lxml")
@@ -59,9 +60,9 @@ def fetch(category, ssl, search):
     return decorative_combine, combine
 
 
-def get_naughty(ssl):
+def get_naughty(ssl, page):
     category = 'xxx'
-    pp_torrents, torrents = fetch(category, ssl, search=False)
+    pp_torrents, torrents = fetch(category, ssl, page, search=False)
     naughty = []
     for i in xrange_(len(pp_torrents)):
         naughty.append(pp_torrents[i])
@@ -71,9 +72,9 @@ def get_naughty(ssl):
     download_prep(torrents)
 
 
-def get_movies(ssl):
+def get_movies(ssl, page):
     category = 'movies'
-    pp_torrents, torrents = fetch(category, ssl, search=False)
+    pp_torrents, torrents = fetch(category, ssl, page, search=False)
     movies = []
     for i in xrange_(len(pp_torrents)):
         movies.append(pp_torrents[i])
@@ -83,9 +84,9 @@ def get_movies(ssl):
     download_prep(torrents)
 
 
-def get_new(ssl):
+def get_new(ssl, page):
     category = 'new'
-    pp_torrents, torrents = fetch(category, ssl, search=False)
+    pp_torrents, torrents = fetch(category, ssl, page, search=False)
     new = []
     for i in xrange_(len(pp_torrents)):
         new.append(pp_torrents[i])
@@ -94,9 +95,9 @@ def get_new(ssl):
     download_prep(torrents)
 
 
-def get_tv(ssl):
+def get_tv(ssl, page):
     category = 'tv'
-    pp_torrents, torrents = fetch(category, ssl, search=False)
+    pp_torrents, torrents = fetch(category, ssl, page, search=False)
     tv = []
     for i in xrange_(len(pp_torrents)):
         tv.append(pp_torrents[i])
@@ -106,9 +107,9 @@ def get_tv(ssl):
     download_prep(torrents)
 
 
-def get_music(ssl):
+def get_music(ssl, page):
     category = 'music'
-    pp_torrents, torrents = fetch(category, ssl, search=False)
+    pp_torrents, torrents = fetch(category, ssl, page, search=False)
     music = []
     for i in xrange_(len(pp_torrents)):
         music.append(pp_torrents[i])
@@ -118,9 +119,9 @@ def get_music(ssl):
     download_prep(torrents)
 
 
-def get_apps(ssl):
+def get_apps(ssl, page):
     category = 'applications'
-    pp_torrents, torrents = fetch(category, ssl, search=False)
+    pp_torrents, torrents = fetch(category, ssl, page, search=False)
     apps = []
     for i in xrange_(len(pp_torrents)):
         apps.append(pp_torrents[i])
@@ -130,9 +131,9 @@ def get_apps(ssl):
     download_prep(torrents)
 
 
-def get_books(ssl):
+def get_books(ssl, page):
     category = 'books'
-    pp_torrents, torrents = fetch(category, ssl, search=False)
+    pp_torrents, torrents = fetch(category, ssl, page, search=False)
     books = []
     for i in xrange_(len(pp_torrents)):
         books.append(pp_torrents[i])
@@ -142,8 +143,8 @@ def get_books(ssl):
     download_prep(torrents)
 
 
-def lets_search(sobj, ssl):
-    pp_torrents, torrents = fetch(sobj, ssl, search=True)
+def lets_search(sobj, ssl, page):
+    pp_torrents, torrents = fetch(sobj, ssl, page, search=True)
     result = []
     if len(pp_torrents) <= 1:
         result = pp_torrents
