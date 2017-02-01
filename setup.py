@@ -1,4 +1,5 @@
 from setuptools import setup
+
 setup(name='kscli',
       packages=['kscli'],
       version='0.1.0',
@@ -7,10 +8,9 @@ setup(name='kscli',
       license='MIT',
       author_email='kodelint@gmail.com',
       url='http://github.com/kodelint/kscli',
-      download_url = 'http://github.com/alyakhtar/mypackage/tarball/1.1.5',
       entry_points='''
                [console_scripts]
-               katastrophe=kscli:main
+               kscli=kscli:main
            ''',
       install_requires=[
           'beautifulsoup4','tabulate','requests','lxml','argparse','bencode','bitstring','fabric','ConfigParser'
