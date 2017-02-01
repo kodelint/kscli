@@ -29,13 +29,13 @@ def error(msg):
     print(header + yellow(msg))
 
 
-def pptable(dump):
+def pptable(resultset):
     """
     :param::dump: Get all the data
     :return::prints: Prints the data tablulate manaer
     """
-    if not dump:
-        error('Nothing Found !!!')
+    if not resultset:
+        error('ResultSet Nothing Found !!!')
         exit()
     else:
         headers = [green('INDEX'), green('NAME'), green('SIZE'), green('SEEDS'), green('LEECHERS'), green('MEGNET')]
@@ -66,24 +66,26 @@ def which(program):
     return None
 
 
-def generate_url(obj, flag):
+def generate_url(obj, page, flag):
     """
     :param:: obj: search object
     :parama:: flag: True or False
+    :parama:: page: Page no.
     :return:: url:  Generate the URL
     """
-    if flag:
-        link = 'https://kickasstorrents.to/usearch/' + obj + '/'
-    elif flag is False and obj == 'new':
-        link = 'https://kickasstorrents.to/' + obj + '/'
+    if page is not None:
+        if flag:
+            link = 'https://kickasstorrents.to/usearch/' + obj + '/' + str(page) + '/'
+        elif flag is False and obj == 'new':
+            link = 'https://kickasstorrents.to/' + obj + '/' + str(page) + '/'
+        else:
+            link = 'https://kickasstorrents.to/' + obj + '/' + str(page) + '/'
     else:
-        link = 'https://kickasstorrents.to/' + obj + '/?field=seeders&sorder=desc'
-
-    # if obj == 'new' and flag is False:
-    #     link = 'https://kickasstorrents.to/' + obj + '/'
-    # elif flag:
-    #     link = 'https://kickasstorrents.to/usearch/' + obj + '/?field=seeders&sorder=desc'
-    # else:
-
+        if flag:
+            link = 'https://kickasstorrents.to/usearch/' + obj + '/'
+        elif flag is False and obj == 'new':
+            link = 'https://kickasstorrents.to/' + obj + '/'
+        else:
+            link = 'https://kickasstorrents.to/' + obj + '/'
 
     return link
