@@ -2,7 +2,7 @@
 ---
 [![license: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/kodelint/kscli/blob/master/LICENSE.md)
 [![Build Status](https://travis-ci.org/kodelint/kscli.png?branch=master)](https://travis-ci.org/kodelint/kscli.svg?branch=master)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](hhttps://github.com/kodelint/kscli/blob/master/CONTRIBUTING.md)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/kodelint/kscli/blob/master/CONTRIBUTING.md)
 
 Command line utility for [KickAss Torrents](http://kickasstorrents.to)
 
@@ -21,12 +21,13 @@ python setup.py install
 
 ```
 $ python kscli/kscli.py --help
-usage: kscli.py [-h] [-n | -m | -t | -a | -b | -x | -s | -S SEARCH | -v] [--no_verifyssl]
+usage: kscli [-h] [-n] [-m] [-t] [-a] [-b] [-x] [-s] [-S SEARCH] [-p PAGE] [-v] [--no_verifyssl]
 
 kscli (KickAss Cli utility)
 
 optional arguments:
   -h, --help            show this help message and exit
+
   -n, --new             Gets the latest torrents from kickasstorrents.to, sorted by seeders (default: False)
   -m, --movies          Gets the latest movie from kickasstorrents.to, sorted by seeders (default: False)
   -t, --tv              Gets the latest tv show from kickasstorrents.to, sorted by seeders (default: False)
@@ -35,7 +36,8 @@ optional arguments:
   -x, --naughty         Gets the latest naughty stuff from kickasstorrents.to, sorted by seeders (default: False)
   -s, --music           Gets the latest music from kickasstorrents.to, sorted by seeders (default: False)
   -S SEARCH, --search SEARCH
-                        Gets the latest music from kickasstorrents.to, sorted by seeders (default: None)
+                        Search results from kickasstorrents.to, sorted by seeders (default: None)
+  -p PAGE, --page PAGE  Navigate page by page (default: None)
   -v, --version         Kickass Version (default: False)
 
 SSL verification toggle:
