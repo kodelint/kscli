@@ -11,12 +11,37 @@ Command line utility for [KickAss Torrents](http://kickasstorrents.to)
 #### Installation
 
 ```
-pip install -r requirements.txt
+$ python setup.py install
 ```
+```
+$ kscli --help
+usage: kscli [-h] [-n] [-m] [-t] [-a] [-b] [-x] [-s] [-S SEARCH] [-p PAGE] [-v] [--no_verifyssl]
+
+kscli (KickAss Cli utility)
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+  -n, --new             Gets the latest torrents from kickasstorrents.to, sorted by seeders (default: False)
+  -m, --movies          Gets the latest movie from kickasstorrents.to, sorted by seeders (default: False)
+  -t, --tv              Gets the latest tv show from kickasstorrents.to, sorted by seeders (default: False)
+  -a, --apps            Gets the latest apps from kickasstorrents.to, sorted by seeders (default: False)
+  -b, --books           Gets the latest books from kickasstorrents.to, sorted by seeders (default: False)
+  -x, --naughty         Gets the latest naughty stuff from kickasstorrents.to, sorted by seeders (default: False)
+  -s, --music           Gets the latest music from kickasstorrents.to, sorted by seeders (default: False)
+  -S SEARCH, --search SEARCH
+                        Search results from kickasstorrents.to, sorted by seeders (default: None)
+  -p PAGE, --page PAGE  Navigate page by page (default: None)
+  -v, --version         Kickass Version (default: False)
+
+SSL verification toggle:
+  --no_verifyssl        Toggle for SSL verification (default: True)
+```
+
 **OR**
 
 ```
-python setup.py install
+pip install -r requirements.txt
 ```
 
 ```
