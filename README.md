@@ -98,7 +98,7 @@ npm install webtorrent
 
 
 * TODO
- - Remove the hard limit of **25** records
+ - ~~Remove the hard limit of **25** records~~ :white_check_mark: [Paging Enabled](https://github.com/kodelint/kscli/commit/5bea2f6961733b4a4065fb28551feee92599131f)
  - Dynamically choose kickass torrent site based on availability.
 
 
