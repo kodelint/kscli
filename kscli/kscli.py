@@ -44,14 +44,14 @@ def main():
     kickass.add_argument('-x', '--naughty', action='store_true', help='Gets the latest naughty stuff from kickasstorrents.to, sorted by seeders')
     kickass.add_argument('-s', '--music', action='store_true', help='Gets the latest music from kickasstorrents.to, sorted by seeders')
     kickass.add_argument('-S', '--search', action='store', help='Search results from kickasstorrents.to, sorted by seeders')
-    kickass.add_argument('-p', '--page', action='store', help='Navigate page by page')
+    kickass.add_argument('-p', '--page', type=int, action='store', help='Navigate page by page')
     kickass.add_argument('-v', '--version', action='store_true', help='Kickass Version')
     sslopts = parser.add_argument_group('SSL verification toggle')
     sslopts.add_argument('--no_verifyssl', action='store_true', default=True, required=False, help='Toggle for SSL verification')
     kickassargs = parser.parse_args()
     ssl = True
 
-    if kickassargs.page:
+    if kickassargs.page is True and kickassargs.page >= 1:
         page = kickassargs.page
     else:
         page = None
