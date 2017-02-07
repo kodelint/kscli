@@ -1,7 +1,7 @@
 # kscli
 
 [![license: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/kodelint/kscli/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/kodelint/kscli.png?branch=master)](https://travis-ci.org/kodelint/kscli.svg?branch=master)
+[![Build Status](https://travis-ci.org/kodelint/kscli.svg?branch=master)](https://travis-ci.org/kodelint/kscli)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/kodelint/kscli/blob/master/CONTRIBUTING.md)
 
 Command line utility for [KickAss Torrents](http://kickasstorrents.to)
