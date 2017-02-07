@@ -91,7 +91,9 @@ npm install webtorrent
        - `-s` or `--songs` 25 songs with highest seeder's count
        - `-a` or `--apps` 25 apps with highest seeder's count
        - `-x` or `--naughty` 25 naughty movies with highest seeder's count
-       - `-n` or `--new` 25 new trending torrents  
+       - `-n` or `--new` 25 new trending torrents
+       - `-S` or `--search` Search for specified torrent
+       - `-p` or `--page` navigate using page number
 
 
    2. Download the torrent using [webtorrent](https://github.com/feross/webtorrent.git)
