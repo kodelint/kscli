@@ -11,8 +11,7 @@ def download(mlink):
         print(red("Error:: ") + yellow("please run `npm install webtorrent` to install `webtorrent`"))
     else:
         try:
-            # print ("/usr/local/bin/webtorrent --out ~/Downloads/clips/ download " + mlink)
-            os.system("/usr/local/bin/webtorrent --out ~/Downloads/clips/ download " + mlink)
+            os.system("/usr/local/bin/webtorrent --out ~/Downloads/ download " + mlink)
         except OSError as e:
             print ("Error: %s - %s." % (e.filename, e.strerror))
 
