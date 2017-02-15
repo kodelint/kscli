@@ -1,7 +1,7 @@
 # kscli
 
-[![license: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/kodelint/kscli/blob/master/LICENSE.md)
-[![Build Status](https://travis-ci.org/kodelint/kscli.png?branch=master)](https://travis-ci.org/kodelint/kscli.svg?branch=master)
+[![license: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/kodelint/kscli/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/kodelint/kscli.svg?branch=master)](https://travis-ci.org/kodelint/kscli)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/kodelint/kscli/blob/master/CONTRIBUTING.md)
 
 Command line utility for [KickAss Torrents](http://kickasstorrents.to)
@@ -91,7 +91,9 @@ npm install webtorrent
        - `-s` or `--songs` 25 songs with highest seeder's count
        - `-a` or `--apps` 25 apps with highest seeder's count
        - `-x` or `--naughty` 25 naughty movies with highest seeder's count
-       - `-n` or `--new` 25 new trending torrents  
+       - `-n` or `--new` 25 new trending torrents
+       - `-S` or `--search` Search for specified torrent
+       - `-p` or `--page` navigate using page number
 
 
    2. Download the torrent using [webtorrent](https://github.com/feross/webtorrent.git)
