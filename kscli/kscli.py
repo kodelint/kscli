@@ -33,6 +33,23 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 def main():
+    """
+    kscli arguments:
+    optional arguments:
+    -h, --help            show this help message and exit
+
+    -n, --new             Gets the latest torrents from kickasstorrents.to, sorted by seeders (default: False)
+    -m, --movies          Gets the latest movie from kickasstorrents.to, sorted by seeders (default: False)
+    -t, --tv              Gets the latest tv show from kickasstorrents.to, sorted by seeders (default: False)
+    -a, --apps            Gets the latest apps from kickasstorrents.to, sorted by seeders (default: False)
+    -b, --books           Gets the latest books from kickasstorrents.to, sorted by seeders (default: False)
+    -x, --naughty         Gets the latest naughty stuff from kickasstorrents.to, sorted by seeders (default: False)
+    -s, --music           Gets the latest music from kickasstorrents.to, sorted by seeders (default: False)
+    -S SEARCH, --search SEARCH
+                            Search results from kickasstorrents.to, sorted by seeders (default: None)
+    -p PAGE, --page PAGE  Navigate page by page (default: None)
+    -v, --version         Kickass Version (default: False)
+    """
     os.environ['COLUMNS'] = '120'
     parser = argparse.ArgumentParser(description='kscli (KickAss Cli utility)', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     kickass = parser.add_argument_group()
@@ -70,7 +87,7 @@ def main():
     elif kickassargs.naughty:
         get_naughty(ssl, page)
     elif kickassargs.music:
-        get_music(ssl)
+        get_music(ssl, page)
     elif kickassargs.search:
         lets_search(kickassargs.search, ssl, page)
     elif kickassargs.version:

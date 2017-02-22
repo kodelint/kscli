@@ -47,8 +47,8 @@ def fetch(category, ssl, page, search):
             torrent_megent.append(j.get_text())
 
         for j in i('div', {'class' : 'none'}):
-             k = ast.literal_eval(j.get('data-sc-params'))
-             torrent_megent.append(k['magnet'])
+            k = ast.literal_eval(j.get('data-sc-params'))
+            torrent_megent.append(k['magnet'])
 
         for i in xrange_(8):
             for j in xrange_(25):
@@ -61,6 +61,7 @@ def fetch(category, ssl, page, search):
 
 
 def get_naughty(ssl, page):
+    """Get the XXX movies"""
     category = 'xxx'
     pp_torrents, torrents = fetch(category, ssl, page, search=False)
     naughty = []
@@ -73,6 +74,7 @@ def get_naughty(ssl, page):
 
 
 def get_movies(ssl, page):
+    """Get the lates movies"""
     category = 'movies'
     pp_torrents, torrents = fetch(category, ssl, page, search=False)
     movies = []
@@ -85,6 +87,7 @@ def get_movies(ssl, page):
 
 
 def get_new(ssl, page):
+    """Get all new stuff"""
     category = 'new'
     pp_torrents, torrents = fetch(category, ssl, page, search=False)
     new = []
@@ -96,6 +99,7 @@ def get_new(ssl, page):
 
 
 def get_tv(ssl, page):
+    """Get the new TV Shows"""
     category = 'tv'
     pp_torrents, torrents = fetch(category, ssl, page, search=False)
     tv = []
@@ -108,6 +112,7 @@ def get_tv(ssl, page):
 
 
 def get_music(ssl, page):
+    """Get the latest music"""
     category = 'music'
     pp_torrents, torrents = fetch(category, ssl, page, search=False)
     music = []
@@ -120,6 +125,7 @@ def get_music(ssl, page):
 
 
 def get_apps(ssl, page):
+    """Get the latest apps"""
     category = 'applications'
     pp_torrents, torrents = fetch(category, ssl, page, search=False)
     apps = []
@@ -132,6 +138,7 @@ def get_apps(ssl, page):
 
 
 def get_books(ssl, page):
+    """Get the latest books"""
     category = 'books'
     pp_torrents, torrents = fetch(category, ssl, page, search=False)
     books = []
@@ -144,6 +151,7 @@ def get_books(ssl, page):
 
 
 def lets_search(sobj, ssl, page):
+    """Get the Search"""
     pp_torrents, torrents = fetch(sobj, ssl, page, search=True)
     result = []
     if len(pp_torrents) <= 1:
